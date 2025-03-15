@@ -261,7 +261,29 @@ std::string convert_audio(const std::string& input_path, const std::string& outp
     }
 }
 
-int main() {
+int main(int argc, char** argv) {
+    if (argc > 1 && std::string(argv[1]) == "--transcribe" && argc > 2) {
+        std::string audio_path = argv[2];
+        std::cout << "Transcribing file: " << audio_path << std::endl;
+
+        try {
+            std::string wav_path = audio_path + ".wav";
+            convert_audio(audio_path, wav_path);
+            json result = transcribe_audio(wav_path);
+
+            // Print result to console
+            std::cout << result.dump(2) << std::endl;
+
+            // Clean up temp file
+            std::remove(wav_path.c_str());
+
+            return 0;
+        } catch (const std::exception& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+            return 1;
+        }
+    }
+
     // Create HTTP server
     httplib::Server server;
 

@@ -17,11 +17,26 @@ include_directories(
 # Add Whisper.cpp source files
 add_subdirectory(whisper.cpp)
 
-# Add main executable
-add_executable(whisper_service main.cpp)
+# Common source files (shared functionality)
+set(COMMON_SOURCES
+    # Add shared utility functions here if needed
+)
 
-# Link libraries
+# Add main web service executable
+add_executable(whisper_service main.cpp ${COMMON_SOURCES})
+
+# Add CLI executable
+add_executable(whisper_cli cli.cpp ${COMMON_SOURCES})
+
+# Link libraries for main service
 target_link_libraries(whisper_service
+    PRIVATE
+    whisper
+    Threads::Threads
+)
+
+# Link libraries for CLI tool
+target_link_libraries(whisper_cli
     PRIVATE
     whisper
     Threads::Threads
@@ -30,10 +45,17 @@ target_link_libraries(whisper_service
 # Some platforms need the filesystem library explicitly linked
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 9.0)
     target_link_libraries(whisper_service PRIVATE stdc++fs)
+    target_link_libraries(whisper_cli PRIVATE stdc++fs)
 endif()
 
 # Copy public directory to build folder
 add_custom_command(TARGET whisper_service POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/public $<TARGET_FILE_DIR:whisper_service>/public
+    ${CMAKE_CURRENT_SOURCE_DIR}/public
+    ${CMAKE_CURRENT_BINARY_DIR}/public
+)
+
+# Install targets
+install(TARGETS whisper_service whisper_cli
+    RUNTIME DESTINATION bin
 )
