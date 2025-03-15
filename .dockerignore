@@ -1,0 +1,276 @@
+# flyctl launch added from cpp-httplib/.gitignore
+cpp-httplib/**/tags
+
+cpp-httplib/**/example/server
+cpp-httplib/**/example/client
+cpp-httplib/**/example/hello
+cpp-httplib/**/example/simplecli
+cpp-httplib/**/example/simplesvr
+cpp-httplib/**/example/benchmark
+cpp-httplib/**/example/redirect
+cpp-httplib/**/example/sse*
+cpp-httplib/**/example/upload
+cpp-httplib/**/example/one_time_request
+cpp-httplib/**/example/server_and_client
+cpp-httplib/**/example/*.pem
+cpp-httplib/**/test/httplib.cc
+cpp-httplib/**/test/httplib.h
+cpp-httplib/**/test/test
+cpp-httplib/**/test/server_fuzzer
+cpp-httplib/**/test/test_proxy
+cpp-httplib/**/test/test_split
+cpp-httplib/**/test/test.xcodeproj/xcuser*
+cpp-httplib/**/test/test.xcodeproj/*/xcuser*
+cpp-httplib/**/test/*.o
+cpp-httplib/**/test/*.pem
+cpp-httplib/**/test/*.srl
+cpp-httplib/**/test/_build_*
+cpp-httplib/**/work
+cpp-httplib/**/benchmark/server*
+
+cpp-httplib/**/*.swp
+
+cpp-httplib/**/build
+cpp-httplib/**/Debug
+cpp-httplib/**/Release
+cpp-httplib/**/*.vcxproj.user
+cpp-httplib/**/*.sdf
+cpp-httplib/**/*.suo
+cpp-httplib/**/*.opensdf
+cpp-httplib/**/*.db
+cpp-httplib/**/ipch
+cpp-httplib/**/*.dSYM
+cpp-httplib/**/*.pyc
+cpp-httplib/**/.*
+!cpp-httplib/.gitattributes
+!cpp-httplib/.travis.yml
+
+# flyctl launch added from json/.gitignore
+json/**/*.dSYM
+json/**/*.o
+json/**/*.gcno
+json/**/*.gcda
+json/**/.DS_Store
+
+json/.idea
+json/cmake-build-*
+
+# Visual Studio / Visual Studio Code
+json/.vs
+json/.vscode
+json/out
+
+# clangd cache
+json/.cache
+
+# build directories (vscode-cmake-tools, user-defined, ...)
+json/build*
+
+# fuzzers
+json/tests/corpus_*
+json/tests/parse_*_fuzzer
+
+# documentation
+json/docs/docset/JSON_for_Modern_C++.docset
+json/docs/docset/JSON_for_Modern_C++.tgz
+json/docs/docset/docSet.dsidx
+json/docs/mkdocs/.cache
+json/docs/mkdocs/docs/__pycache__
+json/docs/mkdocs/site
+json/docs/mkdocs/venv
+
+# serve_header
+json/localhost.pem
+json/localhost-key.pem
+json/serve_header.yml
+
+# Swift Package Manager build directory
+json/.build
+
+json/**/venv
+
+json/**/nlohmann_json.spdx
+
+# Bazel-related
+json/**/MODULE.bazel.lock
+
+# flyctl launch added from whisper.cpp/.gitignore
+whisper.cpp/**/*.o
+whisper.cpp/**/*.a
+whisper.cpp/**/*.d
+whisper.cpp/**/.cache
+whisper.cpp/**/.coreml
+whisper.cpp/**/.test
+whisper.cpp/**/.venv
+whisper.cpp/**/.vs
+whisper.cpp/**/.vscode
+whisper.cpp/**/.DS_Store
+whisper.cpp/**/.vimspector.json
+whisper.cpp/CMakeSettings.json
+whisper.cpp/talk-llama.dSYM
+
+whisper.cpp/**/build
+whisper.cpp/**/build-*
+
+# SPM
+whisper.cpp/**/.build
+whisper.cpp/**/.swiftpm
+whisper.cpp/**/*.metallib
+
+whisper.cpp/**/ggml-metal-embed.metal
+whisper.cpp/**/ggml-metal-embed.metal.tmp
+
+whisper.cpp/main
+whisper.cpp/stream
+whisper.cpp/command
+whisper.cpp/talk
+whisper.cpp/talk-llama
+whisper.cpp/bench
+whisper.cpp/quantize
+whisper.cpp/server
+whisper.cpp/lsp
+
+whisper.cpp/**/arm_neon.h
+whisper.cpp/**/sync.sh
+whisper.cpp/**/libwhisper.a
+whisper.cpp/**/libwhisper.so
+whisper.cpp/**/compile_commands.json
+
+whisper.cpp/**/examples/arm_neon.h
+whisper.cpp/**/examples/whisper.objc/whisper.objc.xcodeproj/xcshareddata
+whisper.cpp/**/examples/whisper.objc/whisper.objc.xcodeproj/xcuserdata
+whisper.cpp/**/examples/whisper.objc/whisper.objc.xcodeproj/project.xcworkspace/xcuserdata
+
+whisper.cpp/**/extra/bench-gg.txt
+
+whisper.cpp/**/models/*.mlmodel
+whisper.cpp/**/models/*.mlmodelc
+whisper.cpp/**/models/*.mlpackage
+whisper.cpp/**/bindings/java/.gradle
+whisper.cpp/**/bindings/java/.idea
+whisper.cpp/**/.idea
+
+whisper.cpp/**/benchmark_results.csv
+whisper.cpp/**/cmake-build-debug
+whisper.cpp/**/.cxx
+whisper.cpp/**/.gradle
+whisper.cpp/**/local.properties
+whisper.cpp/**/.log
+whisper.cpp/**/.exe
+
+# flyctl launch added from whisper.cpp/bindings/go/.gitignore
+whisper.cpp/bindings/go/**/build
+whisper.cpp/bindings/go/**/models
+
+# flyctl launch added from whisper.cpp/bindings/javascript/.gitignore
+whisper.cpp/bindings/javascript/**/publish.log
+
+# flyctl launch added from whisper.cpp/bindings/ruby/.gitignore
+whisper.cpp/bindings/ruby/**/LICENSE
+whisper.cpp/bindings/ruby/**/pkg
+whisper.cpp/bindings/ruby/**/lib/whisper.*
+
+# flyctl launch added from whisper.cpp/bindings/ruby/ext/.gitignore
+whisper.cpp/bindings/ruby/ext/**/Makefile
+whisper.cpp/bindings/ruby/ext/**/whisper.so
+whisper.cpp/bindings/ruby/ext/**/whisper.bundle
+whisper.cpp/bindings/ruby/ext/**/whisper.dll
+whisper.cpp/bindings/ruby/ext/**/scripts/get-flags.mk
+whisper.cpp/bindings/ruby/ext/**/*.o
+whisper.cpp/bindings/ruby/ext/*/**/*.c
+whisper.cpp/bindings/ruby/ext/*/**/*.cpp
+whisper.cpp/bindings/ruby/ext/*/**/*.h
+whisper.cpp/bindings/ruby/ext/*/**/*.m
+whisper.cpp/bindings/ruby/ext/*/**/*.metal
+
+# flyctl launch added from whisper.cpp/bindings/ruby/tests/jfk_reader/.gitignore
+whisper.cpp/bindings/ruby/tests/jfk_reader/**/Makefile
+whisper.cpp/bindings/ruby/tests/jfk_reader/**/jfk_reader.o
+whisper.cpp/bindings/ruby/tests/jfk_reader/**/jfk_reader.so
+whisper.cpp/bindings/ruby/tests/jfk_reader/**/jfk_reader.bundle
+whisper.cpp/bindings/ruby/tests/jfk_reader/**/jfk_reader.dll
+
+# flyctl launch added from whisper.cpp/examples/addon.node/.gitignore
+whisper.cpp/examples/addon.node/**/.idea
+whisper.cpp/examples/addon.node/**/node_modules
+whisper.cpp/examples/addon.node/**/build
+
+# flyctl launch added from whisper.cpp/examples/talk-llama/.gitignore
+whisper.cpp/examples/talk-llama/**/audio.mp3
+whisper.cpp/examples/talk-llama/**/to_speak.txt
+
+# flyctl launch added from whisper.cpp/examples/whisper.android/.gitignore
+whisper.cpp/examples/whisper.android/**/*.iml
+whisper.cpp/examples/whisper.android/**/.gradle
+whisper.cpp/examples/whisper.android/local.properties
+whisper.cpp/examples/whisper.android/.idea/caches
+whisper.cpp/examples/whisper.android/.idea/libraries
+whisper.cpp/examples/whisper.android/.idea/modules.xml
+whisper.cpp/examples/whisper.android/.idea/workspace.xml
+whisper.cpp/examples/whisper.android/.idea/navEditor.xml
+whisper.cpp/examples/whisper.android/.idea/assetWizardSettings.xml
+whisper.cpp/examples/whisper.android/**/.DS_Store
+whisper.cpp/examples/whisper.android/build
+whisper.cpp/examples/whisper.android/captures
+whisper.cpp/examples/whisper.android/**/.externalNativeBuild
+whisper.cpp/examples/whisper.android/**/.cxx
+whisper.cpp/examples/whisper.android/**/local.properties
+
+# flyctl launch added from whisper.cpp/examples/whisper.android/.idea/.gitignore
+# Default ignored files
+whisper.cpp/examples/whisper.android/.idea/shelf
+whisper.cpp/examples/whisper.android/.idea/workspace.xml
+
+# flyctl launch added from whisper.cpp/examples/whisper.android/app/.gitignore
+whisper.cpp/examples/whisper.android/app/build
+
+# flyctl launch added from whisper.cpp/examples/whisper.android/lib/.gitignore
+whisper.cpp/examples/whisper.android/lib/build
+
+# flyctl launch added from whisper.cpp/examples/whisper.android.java/.gitignore
+whisper.cpp/examples/whisper.android.java/**/*.iml
+whisper.cpp/examples/whisper.android.java/**/.gradle
+whisper.cpp/examples/whisper.android.java/local.properties
+whisper.cpp/examples/whisper.android.java/.idea/caches
+whisper.cpp/examples/whisper.android.java/.idea/libraries
+whisper.cpp/examples/whisper.android.java/.idea/modules.xml
+whisper.cpp/examples/whisper.android.java/.idea/workspace.xml
+whisper.cpp/examples/whisper.android.java/.idea/navEditor.xml
+whisper.cpp/examples/whisper.android.java/.idea/assetWizardSettings.xml
+whisper.cpp/examples/whisper.android.java/**/.DS_Store
+whisper.cpp/examples/whisper.android.java/build
+whisper.cpp/examples/whisper.android.java/captures
+whisper.cpp/examples/whisper.android.java/**/.externalNativeBuild
+whisper.cpp/examples/whisper.android.java/**/.cxx
+whisper.cpp/examples/whisper.android.java/**/local.properties
+
+# flyctl launch added from whisper.cpp/examples/whisper.android.java/app/.gitignore
+whisper.cpp/examples/whisper.android.java/app/build
+
+# flyctl launch added from whisper.cpp/examples/whisper.swiftui/.gitignore
+whisper.cpp/examples/whisper.swiftui/**/xcuserdata
+whisper.cpp/examples/whisper.swiftui/**/xcshareddata
+
+# flyctl launch added from whisper.cpp/examples/whisper.swiftui/whisper.swiftui.xcodeproj/.gitignore
+whisper.cpp/examples/whisper.swiftui/whisper.swiftui.xcodeproj/**/xcuserdata
+
+# flyctl launch added from whisper.cpp/examples/whisper.swiftui/whisper.swiftui.xcodeproj/project.xcworkspace/.gitignore
+whisper.cpp/examples/whisper.swiftui/whisper.swiftui.xcodeproj/project.xcworkspace/**/contents.xcworkspacedata
+
+# flyctl launch added from whisper.cpp/ggml/.gitignore
+whisper.cpp/ggml/**/src/ggml-metal-embed.metal
+
+# flyctl launch added from whisper.cpp/models/.gitignore
+whisper.cpp/models/**/*.bin
+
+# flyctl launch added from whisper.cpp/samples/.gitignore
+whisper.cpp/samples/**/*
+!whisper.cpp/samples/**/jfk.wave
+!whisper.cpp/samples/**/jfk.mp3
+
+
+# flyctl launch added from whisper.cpp/tests/.gitignore
+whisper.cpp/tests/**/*.wav
+whisper.cpp/tests/**/*.ogg
+whisper.cpp/tests/**/*.wav.txt
+fly.toml

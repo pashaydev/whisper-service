@@ -1,0 +1,47 @@
+# fly.toml app configuration file generated for whisper-transcription-summer-cherry-7651 on 2025-03-15T01:12:10+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'whisper-transcription'
+primary_region = 'iad'
+kill_signal = 'SIGINT'
+kill_timeout = '5s'
+
+[experimental]
+auto_rollback = true
+
+[build]
+dockerfile = 'Dockerfile'
+
+[[mounts]]
+source = 'whisper_data'
+destination = '/app/models'
+
+[[services]]
+protocol = 'tcp'
+internal_port = 8080
+
+[[services.ports]]
+port = 80
+handlers = ['http']
+force_https = true
+
+[[services.ports]]
+port = 443
+handlers = ['tls', 'http']
+
+[services.concurrency]
+type = 'connections'
+hard_limit = 25
+soft_limit = 20
+
+[[services.tcp_checks]]
+interval = '15s'
+timeout = '2s'
+grace_period = '1s'
+
+[[vm]]
+memory = '1gb'
+cpu_kind = 'shared'
+cpus = 1

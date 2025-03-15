@@ -1,0 +1,6 @@
+models
+cpp-httplib
+build
+json
+whisper.cpp
+.cache
